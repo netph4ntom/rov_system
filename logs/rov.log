@@ -19623,3 +19623,978 @@ ValueError: not enough values to unpack (expected 3, got 2)
 2026-06-21 15:49:50,398 [CameraBottom] ERROR camera_bottom.camera: [BottomCamera] Gagal membuka kamera!
 2026-06-21 15:49:50,951 [CameraBottom] WARNING camera_bottom.camera: [BottomCamera] Gagal baca frame, reconnect...
 2026-06-21 15:49:52,030 [CameraBottom] INFO camera_bottom.camera: [BottomCamera] Membuka kamera index=1
+2026-06-21 16:03:22,865 [MainProcess] INFO main: ============================================================
+2026-06-21 16:03:22,866 [MainProcess] INFO main:   ROV Vision System — Starting up
+2026-06-21 16:03:22,866 [MainProcess] INFO main: ============================================================
+2026-06-21 16:03:25,082 [MainProcess] INFO main:   [+] Proses 'CoreAPI' dimulai (PID=17832)
+2026-06-21 16:03:25,096 [MainProcess] INFO main:   [+] Proses 'CameraFront' dimulai (PID=9984)
+2026-06-21 16:03:25,110 [MainProcess] INFO main:   [+] Proses 'CameraBottom' dimulai (PID=9912)
+2026-06-21 16:03:25,115 [MainProcess] INFO main: 
+2026-06-21 16:03:25,116 [MainProcess] INFO main:   Semua proses berjalan. URL:
+2026-06-21 16:03:25,118 [MainProcess] INFO main:   Core API  : http://localhost:8000
+2026-06-21 16:03:25,120 [MainProcess] INFO main:   Stream F  : http://localhost:8001/stream
+2026-06-21 16:03:25,148 [MainProcess] INFO main:   Stream B  : http://localhost:8002/stream
+2026-06-21 16:03:25,149 [MainProcess] INFO main:   Tekan Ctrl+C untuk berhenti.
+2026-06-21 16:03:25,164 [MainProcess] INFO main: ============================================================
+2026-06-21 16:03:26,768 [CameraFront] INFO camera_front.stream_server: [FrontStream] Proses dimulai
+2026-06-21 16:03:26,769 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=0
+2026-06-21 16:03:26,820 [CoreAPI] INFO core.routes: [CoreAPI] Proses dimulai
+2026-06-21 16:03:26,914 [CameraBottom] INFO camera_bottom.stream_server: [BottomStream] Proses dimulai
+2026-06-21 16:03:26,945 [CameraBottom] INFO camera_bottom.camera: [BottomCamera] Membuka kamera index=1
+2026-06-21 16:03:27,045 [CoreAPI] INFO core.websocket: [WS] Queue drainer threads dimulai
+2026-06-21 16:03:27,046 [CoreAPI] INFO core.routes: [CoreAPI] Server berjalan di port 8000
+2026-06-21 16:03:27,078 [CoreAPI] INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.1.236:8000
+2026-06-21 16:03:27,078 [CoreAPI] INFO werkzeug: [33mPress CTRL+C to quit[0m
+2026-06-21 16:03:27,404 [CameraBottom] ERROR camera_bottom.camera: [BottomCamera] Gagal membuka kamera!
+2026-06-21 16:03:27,406 [CameraBottom] WARNING camera_bottom.camera: [BottomCamera] Reconnect kamera...
+2026-06-21 16:03:27,406 [CameraBottom] INFO camera_bottom.stream_server: [BottomStream] MJPEG server berjalan di port 8002
+2026-06-21 16:03:27,407 [CameraBottom] INFO camera_bottom.camera: [BottomCamera] Membuka kamera index=1
+2026-06-21 16:03:27,460 [CameraBottom] INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8002
+ * Running on http://192.168.1.236:8002
+2026-06-21 16:03:27,462 [CameraBottom] INFO werkzeug: [33mPress CTRL+C to quit[0m
+2026-06-21 16:03:27,603 [CameraBottom] ERROR camera_bottom.camera: [BottomCamera] Gagal membuka kamera!
+2026-06-21 16:03:28,008 [CoreAPI] INFO core.websocket: [WS] Client baru terkoneksi
+2026-06-21 16:03:28,103 [CameraBottom] WARNING camera_bottom.camera: [BottomCamera] Gagal baca frame, reconnect...
+2026-06-21 16:03:29,104 [CameraBottom] INFO camera_bottom.camera: [BottomCamera] Membuka kamera index=1
+2026-06-21 16:03:29,262 [CameraBottom] ERROR camera_bottom.camera: [BottomCamera] Gagal membuka kamera!
+2026-06-21 16:03:29,262 [CameraBottom] WARNING camera_bottom.camera: [BottomCamera] Reconnect kamera...
+2026-06-21 16:03:29,262 [CameraBottom] INFO camera_bottom.camera: [BottomCamera] Membuka kamera index=1
+2026-06-21 16:03:29,415 [CameraBottom] ERROR camera_bottom.camera: [BottomCamera] Gagal membuka kamera!
+2026-06-21 16:03:29,915 [CameraBottom] WARNING camera_bottom.camera: [BottomCamera] Gagal baca frame, reconnect...
+2026-06-21 16:03:30,916 [CameraBottom] INFO camera_bottom.camera: [BottomCamera] Membuka kamera index=1
+2026-06-21 16:03:31,066 [CameraBottom] ERROR camera_bottom.camera: [BottomCamera] Gagal membuka kamera!
+2026-06-21 16:03:31,066 [CameraBottom] WARNING camera_bottom.camera: [BottomCamera] Reconnect kamera...
+2026-06-21 16:03:31,066 [CameraBottom] INFO camera_bottom.camera: [BottomCamera] Membuka kamera index=1
+2026-06-21 16:03:31,203 [CameraBottom] ERROR camera_bottom.camera: [BottomCamera] Gagal membuka kamera!
+2026-06-21 16:03:31,704 [CameraBottom] WARNING camera_bottom.camera: [BottomCamera] Gagal baca frame, reconnect...
+2026-06-21 16:03:32,705 [CameraBottom] INFO camera_bottom.camera: [BottomCamera] Membuka kamera index=1
+2026-06-21 16:03:32,880 [CameraBottom] ERROR camera_bottom.camera: [BottomCamera] Gagal membuka kamera!
+2026-06-21 16:03:32,880 [CameraBottom] WARNING camera_bottom.camera: [BottomCamera] Reconnect kamera...
+2026-06-21 16:03:32,880 [CameraBottom] INFO camera_bottom.camera: [BottomCamera] Membuka kamera index=1
+2026-06-21 16:03:33,027 [CameraBottom] ERROR camera_bottom.camera: [BottomCamera] Gagal membuka kamera!
+2026-06-21 16:03:33,528 [CameraBottom] WARNING camera_bottom.camera: [BottomCamera] Gagal baca frame, reconnect...
+2026-06-21 16:03:34,528 [CameraBottom] INFO camera_bottom.camera: [BottomCamera] Membuka kamera index=1
+2026-06-21 16:03:34,791 [CameraBottom] ERROR camera_bottom.camera: [BottomCamera] Gagal membuka kamera!
+2026-06-21 16:03:34,792 [CameraBottom] WARNING camera_bottom.camera: [BottomCamera] Reconnect kamera...
+2026-06-21 16:03:34,792 [CameraBottom] INFO camera_bottom.camera: [BottomCamera] Membuka kamera index=1
+2026-06-21 16:03:35,033 [CameraBottom] ERROR camera_bottom.camera: [BottomCamera] Gagal membuka kamera!
+2026-06-21 16:03:35,533 [CameraBottom] WARNING camera_bottom.camera: [BottomCamera] Gagal baca frame, reconnect...
+2026-06-21 16:03:36,534 [CameraBottom] INFO camera_bottom.camera: [BottomCamera] Membuka kamera index=1
+2026-06-21 16:03:36,795 [CameraBottom] ERROR camera_bottom.camera: [BottomCamera] Gagal membuka kamera!
+2026-06-21 16:03:36,795 [CameraBottom] WARNING camera_bottom.camera: [BottomCamera] Reconnect kamera...
+2026-06-21 16:03:36,796 [CameraBottom] INFO camera_bottom.camera: [BottomCamera] Membuka kamera index=1
+2026-06-21 16:03:37,064 [CameraBottom] ERROR camera_bottom.camera: [BottomCamera] Gagal membuka kamera!
+2026-06-21 16:03:37,565 [CameraBottom] WARNING camera_bottom.camera: [BottomCamera] Gagal baca frame, reconnect...
+2026-06-21 16:03:38,566 [CameraBottom] INFO camera_bottom.camera: [BottomCamera] Membuka kamera index=1
+2026-06-21 16:03:38,844 [CameraBottom] ERROR camera_bottom.camera: [BottomCamera] Gagal membuka kamera!
+2026-06-21 16:03:38,844 [CameraBottom] WARNING camera_bottom.camera: [BottomCamera] Reconnect kamera...
+2026-06-21 16:03:38,845 [CameraBottom] INFO camera_bottom.camera: [BottomCamera] Membuka kamera index=1
+2026-06-21 16:03:39,148 [CameraBottom] ERROR camera_bottom.camera: [BottomCamera] Gagal membuka kamera!
+2026-06-21 16:03:39,649 [CameraBottom] WARNING camera_bottom.camera: [BottomCamera] Gagal baca frame, reconnect...
+2026-06-21 16:03:40,341 [CameraFront] INFO camera_front.stream_server: [FrontStream] MJPEG server berjalan di port 8001
+2026-06-21 16:03:40,398 [CameraFront] INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://192.168.1.236:8001
+2026-06-21 16:03:40,399 [CameraFront] INFO werkzeug: [33mPress CTRL+C to quit[0m
+2026-06-21 16:03:40,650 [CameraBottom] INFO camera_bottom.camera: [BottomCamera] Membuka kamera index=1
+2026-06-21 16:03:40,863 [CameraBottom] ERROR camera_bottom.camera: [BottomCamera] Gagal membuka kamera!
+2026-06-21 16:03:40,863 [CameraBottom] WARNING camera_bottom.camera: [BottomCamera] Reconnect kamera...
+2026-06-21 16:03:40,864 [CameraBottom] INFO camera_bottom.camera: [BottomCamera] Membuka kamera index=1
+2026-06-21 16:03:41,155 [CameraBottom] ERROR camera_bottom.camera: [BottomCamera] Gagal membuka kamera!
+2026-06-21 16:03:41,173 [CameraFront] INFO werkzeug: 127.0.0.1 - - [21/Jun/2026 16:03:41] "GET /stream HTTP/1.1" 200 -
+2026-06-21 16:03:41,657 [CameraBottom] WARNING camera_bottom.camera: [BottomCamera] Gagal baca frame, reconnect...
+2026-06-21 16:03:42,658 [CameraBottom] INFO camera_bottom.camera: [BottomCamera] Membuka kamera index=1
+2026-06-21 16:03:42,951 [CameraBottom] ERROR camera_bottom.camera: [BottomCamera] Gagal membuka kamera!
+2026-06-21 16:03:42,952 [CameraBottom] WARNING camera_bottom.camera: [BottomCamera] Reconnect kamera...
+2026-06-21 16:03:42,952 [CameraBottom] INFO camera_bottom.camera: [BottomCamera] Membuka kamera index=1
+2026-06-21 16:03:43,196 [CameraBottom] ERROR camera_bottom.camera: [BottomCamera] Gagal membuka kamera!
+2026-06-21 16:03:43,697 [CameraBottom] WARNING camera_bottom.camera: [BottomCamera] Gagal baca frame, reconnect...
+2026-06-21 16:03:44,698 [CameraBottom] INFO camera_bottom.camera: [BottomCamera] Membuka kamera index=1
+2026-06-21 16:03:44,947 [CameraBottom] ERROR camera_bottom.camera: [BottomCamera] Gagal membuka kamera!
+2026-06-21 16:03:44,947 [CameraBottom] WARNING camera_bottom.camera: [BottomCamera] Reconnect kamera...
+2026-06-21 16:03:44,947 [CameraBottom] INFO camera_bottom.camera: [BottomCamera] Membuka kamera index=1
+2026-06-21 16:03:45,208 [CameraBottom] ERROR camera_bottom.camera: [BottomCamera] Gagal membuka kamera!
+2026-06-21 16:03:45,708 [CameraBottom] WARNING camera_bottom.camera: [BottomCamera] Gagal baca frame, reconnect...
+2026-06-21 16:03:46,709 [CameraBottom] INFO camera_bottom.camera: [BottomCamera] Membuka kamera index=1
+2026-06-21 16:03:46,971 [CameraBottom] ERROR camera_bottom.camera: [BottomCamera] Gagal membuka kamera!
+2026-06-21 16:03:46,971 [CameraBottom] WARNING camera_bottom.camera: [BottomCamera] Reconnect kamera...
+2026-06-21 16:03:46,971 [CameraBottom] INFO camera_bottom.camera: [BottomCamera] Membuka kamera index=1
+2026-06-21 16:03:47,223 [CameraBottom] ERROR camera_bottom.camera: [BottomCamera] Gagal membuka kamera!
+2026-06-21 16:03:47,724 [CameraBottom] WARNING camera_bottom.camera: [BottomCamera] Gagal baca frame, reconnect...
+2026-06-21 16:03:48,726 [CameraBottom] INFO camera_bottom.camera: [BottomCamera] Membuka kamera index=1
+2026-06-21 16:03:48,998 [CameraBottom] ERROR camera_bottom.camera: [BottomCamera] Gagal membuka kamera!
+2026-06-21 16:03:48,998 [CameraBottom] WARNING camera_bottom.camera: [BottomCamera] Reconnect kamera...
+2026-06-21 16:03:49,000 [CameraBottom] INFO camera_bottom.camera: [BottomCamera] Membuka kamera index=1
+2026-06-21 16:03:49,279 [CameraBottom] ERROR camera_bottom.camera: [BottomCamera] Gagal membuka kamera!
+2026-06-21 16:03:49,780 [CameraBottom] WARNING camera_bottom.camera: [BottomCamera] Gagal baca frame, reconnect...
+2026-06-21 16:03:50,833 [CameraBottom] INFO camera_bottom.camera: [BottomCamera] Membuka kamera index=1
+2026-06-21 16:03:51,140 [CameraBottom] ERROR camera_bottom.camera: [BottomCamera] Gagal membuka kamera!
+2026-06-21 16:03:51,141 [CameraBottom] WARNING camera_bottom.camera: [BottomCamera] Reconnect kamera...
+2026-06-21 16:03:51,141 [CameraBottom] INFO camera_bottom.camera: [BottomCamera] Membuka kamera index=1
+2026-06-21 16:03:51,415 [CameraBottom] ERROR camera_bottom.camera: [BottomCamera] Gagal membuka kamera!
+2026-06-21 16:03:51,916 [CameraBottom] WARNING camera_bottom.camera: [BottomCamera] Gagal baca frame, reconnect...
+2026-06-21 16:03:52,918 [CameraBottom] INFO camera_bottom.camera: [BottomCamera] Membuka kamera index=1
+2026-06-21 16:03:53,204 [CameraBottom] ERROR camera_bottom.camera: [BottomCamera] Gagal membuka kamera!
+2026-06-21 16:03:53,204 [CameraBottom] WARNING camera_bottom.camera: [BottomCamera] Reconnect kamera...
+2026-06-21 16:03:53,204 [CameraBottom] INFO camera_bottom.camera: [BottomCamera] Membuka kamera index=1
+2026-06-21 16:03:53,475 [CameraBottom] ERROR camera_bottom.camera: [BottomCamera] Gagal membuka kamera!
+2026-06-21 16:03:53,976 [CameraBottom] WARNING camera_bottom.camera: [BottomCamera] Gagal baca frame, reconnect...
+2026-06-21 16:03:54,977 [CameraBottom] INFO camera_bottom.camera: [BottomCamera] Membuka kamera index=1
+2026-06-21 16:03:55,296 [CameraBottom] ERROR camera_bottom.camera: [BottomCamera] Gagal membuka kamera!
+2026-06-21 16:03:55,296 [CameraBottom] WARNING camera_bottom.camera: [BottomCamera] Reconnect kamera...
+2026-06-21 16:03:55,296 [CameraBottom] INFO camera_bottom.camera: [BottomCamera] Membuka kamera index=1
+2026-06-21 16:03:55,443 [CameraBottom] ERROR camera_bottom.camera: [BottomCamera] Gagal membuka kamera!
+2026-06-21 16:03:55,943 [CameraBottom] WARNING camera_bottom.camera: [BottomCamera] Gagal baca frame, reconnect...
+2026-06-21 16:03:56,950 [CameraBottom] INFO camera_bottom.camera: [BottomCamera] Membuka kamera index=1
+2026-06-21 16:03:57,188 [CameraBottom] ERROR camera_bottom.camera: [BottomCamera] Gagal membuka kamera!
+2026-06-21 16:03:57,189 [CameraBottom] WARNING camera_bottom.camera: [BottomCamera] Reconnect kamera...
+2026-06-21 16:03:57,189 [CameraBottom] INFO camera_bottom.camera: [BottomCamera] Membuka kamera index=1
+2026-06-21 16:03:57,344 [CameraBottom] ERROR camera_bottom.camera: [BottomCamera] Gagal membuka kamera!
+2026-06-21 16:03:57,844 [CameraBottom] WARNING camera_bottom.camera: [BottomCamera] Gagal baca frame, reconnect...
+2026-06-21 16:03:58,846 [CameraBottom] INFO camera_bottom.camera: [BottomCamera] Membuka kamera index=1
+2026-06-21 16:03:59,086 [CameraBottom] ERROR camera_bottom.camera: [BottomCamera] Gagal membuka kamera!
+2026-06-21 16:03:59,086 [CameraBottom] WARNING camera_bottom.camera: [BottomCamera] Reconnect kamera...
+2026-06-21 16:03:59,086 [CameraBottom] INFO camera_bottom.camera: [BottomCamera] Membuka kamera index=1
+2026-06-21 16:03:59,237 [CameraBottom] ERROR camera_bottom.camera: [BottomCamera] Gagal membuka kamera!
+2026-06-21 16:03:59,738 [CameraBottom] WARNING camera_bottom.camera: [BottomCamera] Gagal baca frame, reconnect...
+2026-06-21 16:04:00,739 [CameraBottom] INFO camera_bottom.camera: [BottomCamera] Membuka kamera index=1
+2026-06-21 16:04:00,965 [CameraBottom] ERROR camera_bottom.camera: [BottomCamera] Gagal membuka kamera!
+2026-06-21 16:04:00,965 [CameraBottom] WARNING camera_bottom.camera: [BottomCamera] Reconnect kamera...
+2026-06-21 16:04:00,965 [CameraBottom] INFO camera_bottom.camera: [BottomCamera] Membuka kamera index=1
+2026-06-21 16:04:01,107 [CameraBottom] ERROR camera_bottom.camera: [BottomCamera] Gagal membuka kamera!
+2026-06-21 16:04:01,607 [CameraBottom] WARNING camera_bottom.camera: [BottomCamera] Gagal baca frame, reconnect...
+2026-06-21 16:04:01,916 [MainProcess] INFO main: Signal diterima, menghentikan semua proses...
+2026-06-21 16:04:01,997 [MainProcess] INFO main: Semua proses dihentikan. Selamat tinggal!
+2026-06-21 16:04:36,338 [MainProcess] INFO main: ============================================================
+2026-06-21 16:04:36,339 [MainProcess] INFO main:   ROV Vision System — Starting up
+2026-06-21 16:04:36,339 [MainProcess] INFO main: ============================================================
+2026-06-21 16:04:38,035 [MainProcess] INFO main:   [+] Proses 'CoreAPI' dimulai (PID=12160)
+2026-06-21 16:04:38,043 [MainProcess] INFO main:   [+] Proses 'CameraFront' dimulai (PID=10884)
+2026-06-21 16:04:38,051 [MainProcess] INFO main:   [+] Proses 'CameraBottom' dimulai (PID=11600)
+2026-06-21 16:04:38,054 [MainProcess] INFO main: 
+2026-06-21 16:04:38,055 [MainProcess] INFO main:   Semua proses berjalan. URL:
+2026-06-21 16:04:38,056 [MainProcess] INFO main:   Core API  : http://localhost:8000
+2026-06-21 16:04:38,062 [MainProcess] INFO main:   Stream F  : http://localhost:8001/stream
+2026-06-21 16:04:38,071 [MainProcess] INFO main:   Stream B  : http://localhost:8002/stream
+2026-06-21 16:04:38,073 [MainProcess] INFO main:   Tekan Ctrl+C untuk berhenti.
+2026-06-21 16:04:38,073 [MainProcess] INFO main: ============================================================
+2026-06-21 16:04:40,284 [CameraFront] INFO camera_front.stream_server: [FrontStream] Proses dimulai
+2026-06-21 16:04:40,286 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:04:40,378 [CameraBottom] INFO camera_bottom.stream_server: [BottomStream] Proses dimulai
+2026-06-21 16:04:40,380 [CameraBottom] INFO camera_bottom.camera: [BottomCamera] Membuka kamera index=0
+2026-06-21 16:04:40,394 [CoreAPI] INFO core.routes: [CoreAPI] Proses dimulai
+2026-06-21 16:04:40,511 [CoreAPI] INFO core.websocket: [WS] Queue drainer threads dimulai
+2026-06-21 16:04:40,514 [CoreAPI] INFO core.routes: [CoreAPI] Server berjalan di port 8000
+2026-06-21 16:04:40,561 [CoreAPI] INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.1.236:8000
+2026-06-21 16:04:40,562 [CoreAPI] INFO werkzeug: [33mPress CTRL+C to quit[0m
+2026-06-21 16:04:40,577 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:04:40,577 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:04:40,577 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:04:40,578 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:04:40,579 [CameraFront] INFO camera_front.stream_server: [FrontStream] MJPEG server berjalan di port 8001
+2026-06-21 16:04:40,579 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:04:40,586 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:04:40,624 [CameraFront] INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://192.168.1.236:8001
+2026-06-21 16:04:40,625 [CameraFront] INFO werkzeug: [33mPress CTRL+C to quit[0m
+2026-06-21 16:04:40,789 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:04:40,789 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:04:40,789 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:04:40,789 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:04:40,981 [CoreAPI] INFO core.websocket: [WS] Client baru terkoneksi
+2026-06-21 16:04:42,581 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:04:42,581 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:04:42,803 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:04:42,804 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:04:42,804 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:04:42,804 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:04:44,590 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:04:44,590 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:04:44,759 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:04:44,759 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:04:44,760 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:04:44,760 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:04:46,598 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:04:46,598 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:04:46,885 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:04:46,885 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:04:46,885 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:04:46,886 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:04:48,605 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:04:48,605 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:04:48,889 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:04:48,889 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:04:48,889 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:04:48,890 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:04:50,609 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:04:50,609 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:04:50,883 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:04:50,883 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:04:50,883 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:04:50,884 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:04:52,610 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:04:52,610 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:04:52,791 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:04:52,791 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:04:52,792 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:04:52,792 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:04:54,612 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:04:54,612 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:04:54,899 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:04:54,900 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:04:54,900 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:04:54,900 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:04:55,742 [CameraBottom] INFO camera_bottom.stream_server: [BottomStream] MJPEG server berjalan di port 8002
+2026-06-21 16:04:55,810 [CameraBottom] INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8002
+ * Running on http://192.168.1.236:8002
+2026-06-21 16:04:55,811 [CameraBottom] INFO werkzeug: [33mPress CTRL+C to quit[0m
+2026-06-21 16:04:56,614 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:04:56,617 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:04:56,939 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:04:56,939 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:04:56,939 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:04:56,940 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:04:58,619 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:04:58,619 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:04:58,957 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:04:58,958 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:04:58,958 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:04:58,958 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:05:00,628 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:05:00,629 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:05:00,956 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:05:00,957 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:05:00,957 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:05:00,957 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:05:02,637 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:05:02,638 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:05:02,953 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:05:02,953 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:05:02,953 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:05:02,954 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:05:04,639 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:05:04,640 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:05:04,945 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:05:04,945 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:05:04,945 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:05:04,945 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:05:06,642 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:05:06,643 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:05:06,997 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:05:06,998 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:05:06,998 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:05:06,999 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:05:08,647 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:05:08,648 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:05:08,972 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:05:08,973 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:05:08,974 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:05:08,975 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:05:10,654 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:05:10,655 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:05:11,064 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:05:11,064 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:05:11,065 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:05:11,066 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:05:12,663 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:05:12,663 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:05:13,023 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:05:13,024 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:05:13,024 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:05:13,024 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:05:14,663 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:05:14,664 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:05:14,973 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:05:14,974 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:05:14,974 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:05:14,974 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:05:16,670 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:05:16,672 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:05:16,979 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:05:16,979 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:05:16,979 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:05:16,980 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:05:18,678 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:05:18,681 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:05:18,966 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:05:18,966 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:05:18,967 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:05:18,967 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:05:19,073 [CameraBottom] INFO werkzeug: 127.0.0.1 - - [21/Jun/2026 16:05:19] "GET /stream HTTP/1.1" 200 -
+2026-06-21 16:05:20,681 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:05:20,681 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:05:20,905 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:05:20,905 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:05:20,906 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:05:20,906 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:05:22,683 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:05:22,684 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:05:22,919 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:05:22,920 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:05:22,920 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:05:22,920 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:05:24,687 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:05:24,688 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:05:24,954 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:05:24,954 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:05:24,954 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:05:24,955 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:05:25,404 [CameraBottom] INFO camera_bottom.qr_detector: [QRDetector] QR baru terdeteksi: https://qr1.be/OAPM
+2026-06-21 16:05:25,407 [CoreAPI] DEBUG core.websocket: [WS] QR dari queue: {'type': 'qr_detected', 'data': 'https://qr1.be/OAPM', 'aligned': False, 'timestamp': 1102333.6264244}
+2026-06-21 16:05:26,459 [CameraBottom] INFO camera_bottom.qr_detector: [QRDetector] QR baru terdeteksi: https://qr1.be/OAPM
+2026-06-21 16:05:26,461 [CoreAPI] DEBUG core.websocket: [WS] QR dari queue: {'type': 'qr_detected', 'data': 'https://qr1.be/OAPM', 'aligned': False, 'timestamp': 1102334.6933153}
+2026-06-21 16:05:26,695 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:05:26,696 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:05:26,864 [CameraBottom] INFO camera_bottom.qr_detector: [QRDetector] QR baru terdeteksi: https://qr1.be/OAPM
+2026-06-21 16:05:26,866 [CoreAPI] DEBUG core.websocket: [WS] QR dari queue: {'type': 'qr_detected', 'data': 'https://qr1.be/OAPM', 'aligned': False, 'timestamp': 1102335.111736}
+2026-06-21 16:05:26,980 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:05:26,981 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:05:26,981 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:05:26,981 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:05:27,310 [CameraBottom] INFO camera_bottom.qr_detector: [QRDetector] QR baru terdeteksi: https://qr1.be/OAPM
+2026-06-21 16:05:27,311 [CoreAPI] DEBUG core.websocket: [WS] QR dari queue: {'type': 'qr_detected', 'data': 'https://qr1.be/OAPM', 'aligned': False, 'timestamp': 1102335.5450004}
+2026-06-21 16:05:28,696 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:05:28,697 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:05:28,939 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:05:28,940 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:05:28,942 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:05:28,944 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:05:29,865 [CameraBottom] INFO camera_bottom.qr_detector: [QRDetector] QR baru terdeteksi: https://qr1.be/OAPM
+2026-06-21 16:05:29,866 [CoreAPI] DEBUG core.websocket: [WS] QR dari queue: {'type': 'qr_detected', 'data': 'https://qr1.be/OAPM', 'aligned': False, 'timestamp': 1102338.1252794}
+2026-06-21 16:05:30,700 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:05:30,711 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:05:30,943 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:05:30,944 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:05:30,945 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:05:30,945 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:05:31,620 [CameraBottom] INFO camera_bottom.qr_detector: [QRDetector] QR baru terdeteksi: https://qr1.be/OAPM
+2026-06-21 16:05:31,621 [CoreAPI] DEBUG core.websocket: [WS] QR dari queue: {'type': 'qr_detected', 'data': 'https://qr1.be/OAPM', 'aligned': False, 'timestamp': 1102339.8341083}
+2026-06-21 16:05:32,703 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:05:32,703 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:05:32,936 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:05:32,937 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:05:32,937 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:05:32,937 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:05:34,711 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:05:34,713 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:05:34,959 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:05:34,959 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:05:34,959 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:05:34,960 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:05:36,720 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:05:36,720 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:05:36,792 [CameraBottom] INFO camera_bottom.qr_detector: [QRDetector] QR baru terdeteksi: https://qr1.be/OAPM
+2026-06-21 16:05:36,796 [CoreAPI] DEBUG core.websocket: [WS] QR dari queue: {'type': 'qr_detected', 'data': 'https://qr1.be/OAPM', 'aligned': False, 'timestamp': 1102345.0397824}
+2026-06-21 16:05:36,966 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:05:36,967 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:05:36,967 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:05:36,967 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:05:37,226 [CameraBottom] INFO camera_bottom.qr_detector: [QRDetector] QR baru terdeteksi: https://qr1.be/OAPM
+2026-06-21 16:05:37,227 [CoreAPI] DEBUG core.websocket: [WS] QR dari queue: {'type': 'qr_detected', 'data': 'https://qr1.be/OAPM', 'aligned': False, 'timestamp': 1102345.4652041}
+2026-06-21 16:05:38,726 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:05:38,729 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:05:38,951 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:05:38,951 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:05:38,952 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:05:38,952 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:05:40,448 [CameraBottom] INFO camera_bottom.qr_detector: [QRDetector] QR baru terdeteksi: https://qr4.roselleebarle.com/TSC5
+2026-06-21 16:05:40,449 [CoreAPI] DEBUG core.websocket: [WS] QR dari queue: {'type': 'qr_detected', 'data': 'https://qr4.roselleebarle.com/TSC5', 'aligned': False, 'timestamp': 1102348.6807622}
+2026-06-21 16:05:40,730 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:05:40,730 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:05:40,971 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:05:40,971 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:05:40,971 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:05:40,971 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:05:41,124 [CameraBottom] INFO camera_bottom.qr_detector: [QRDetector] QR baru terdeteksi: https://qr4.roselleebarle.com/TSC5
+2026-06-21 16:05:41,125 [CoreAPI] DEBUG core.websocket: [WS] QR dari queue: {'type': 'qr_detected', 'data': 'https://qr4.roselleebarle.com/TSC5', 'aligned': False, 'timestamp': 1102349.3342415}
+2026-06-21 16:05:42,419 [CameraBottom] INFO camera_bottom.qr_detector: [QRDetector] QR baru terdeteksi: https://qr4.roselleebarle.com/TSC5
+2026-06-21 16:05:42,420 [CoreAPI] DEBUG core.websocket: [WS] QR dari queue: {'type': 'qr_detected', 'data': 'https://qr4.roselleebarle.com/TSC5', 'aligned': False, 'timestamp': 1102350.6822896}
+2026-06-21 16:05:42,732 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:05:42,732 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:05:42,877 [CameraBottom] INFO camera_bottom.qr_detector: [QRDetector] QR baru terdeteksi: https://qr4.roselleebarle.com/TSC5
+2026-06-21 16:05:42,878 [CoreAPI] DEBUG core.websocket: [WS] QR dari queue: {'type': 'qr_detected', 'data': 'https://qr4.roselleebarle.com/TSC5', 'aligned': False, 'timestamp': 1102351.1405178}
+2026-06-21 16:05:42,982 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:05:42,983 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:05:42,984 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:05:42,985 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:05:44,157 [CameraBottom] INFO camera_bottom.qr_detector: [QRDetector] QR baru terdeteksi: https://qr4.roselleebarle.com/TSC5
+2026-06-21 16:05:44,158 [CoreAPI] DEBUG core.websocket: [WS] QR dari queue: {'type': 'qr_detected', 'data': 'https://qr4.roselleebarle.com/TSC5', 'aligned': False, 'timestamp': 1102352.4174434}
+2026-06-21 16:05:44,732 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:05:44,733 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:05:44,957 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:05:44,957 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:05:44,958 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:05:44,960 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:05:46,738 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:05:46,739 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:05:46,960 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:05:46,960 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:05:46,961 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:05:46,961 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:05:48,585 [CameraBottom] INFO camera_bottom.qr_detector: [QRDetector] QR baru terdeteksi: https://q.me-qr.com/hhujx7fg
+2026-06-21 16:05:48,586 [CoreAPI] DEBUG core.websocket: [WS] QR dari queue: {'type': 'qr_detected', 'data': 'https://q.me-qr.com/hhujx7fg', 'aligned': False, 'timestamp': 1102356.806982}
+2026-06-21 16:05:48,747 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:05:48,749 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:05:48,979 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:05:48,979 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:05:48,980 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:05:48,980 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:05:50,753 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:05:50,753 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:05:50,982 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:05:50,982 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:05:50,983 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:05:50,983 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:05:52,760 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:05:52,762 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:05:52,952 [CameraBottom] INFO camera_bottom.qr_detector: [QRDetector] QR baru terdeteksi: https://q.me-qr.com/yz39ltim
+2026-06-21 16:05:52,953 [CoreAPI] DEBUG core.websocket: [WS] QR dari queue: {'type': 'qr_detected', 'data': 'https://q.me-qr.com/yz39ltim', 'aligned': False, 'timestamp': 1102361.2012719}
+2026-06-21 16:05:53,027 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:05:53,028 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:05:53,028 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:05:53,028 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:05:53,639 [CameraBottom] INFO camera_bottom.qr_detector: [QRDetector] QR baru terdeteksi: https://q.me-qr.com/yz39ltim
+2026-06-21 16:05:53,640 [CoreAPI] DEBUG core.websocket: [WS] QR dari queue: {'type': 'qr_detected', 'data': 'https://q.me-qr.com/yz39ltim', 'aligned': False, 'timestamp': 1102361.8523516}
+2026-06-21 16:05:54,309 [CameraBottom] INFO camera_bottom.qr_detector: [QRDetector] QR baru terdeteksi: https://q.me-qr.com/yz39ltim
+2026-06-21 16:05:54,313 [CoreAPI] DEBUG core.websocket: [WS] QR dari queue: {'type': 'qr_detected', 'data': 'https://q.me-qr.com/yz39ltim', 'aligned': False, 'timestamp': 1102362.5067935}
+2026-06-21 16:05:54,767 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:05:54,768 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:05:55,032 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:05:55,032 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:05:55,032 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:05:55,032 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:05:56,768 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:05:56,768 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:05:57,044 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:05:57,045 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:05:57,046 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:05:57,046 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:05:57,318 [CameraBottom] INFO camera_bottom.qr_detector: [QRDetector] QR baru terdeteksi: berhasil terhubung
+2026-06-21 16:05:57,319 [CoreAPI] DEBUG core.websocket: [WS] QR dari queue: {'type': 'qr_detected', 'data': 'berhasil terhubung', 'aligned': False, 'timestamp': 1102365.5304753}
+2026-06-21 16:05:58,380 [CameraBottom] INFO camera_bottom.qr_detector: [QRDetector] QR baru terdeteksi: berhasil terhubung
+2026-06-21 16:05:58,381 [CoreAPI] DEBUG core.websocket: [WS] QR dari queue: {'type': 'qr_detected', 'data': 'berhasil terhubung', 'aligned': False, 'timestamp': 1102366.629333}
+2026-06-21 16:05:58,774 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:05:58,776 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:05:59,043 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:05:59,044 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:05:59,044 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:05:59,044 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:05:59,317 [CameraBottom] INFO camera_bottom.qr_detector: [QRDetector] QR baru terdeteksi: berhasil terhubung
+2026-06-21 16:05:59,318 [CoreAPI] DEBUG core.websocket: [WS] QR dari queue: {'type': 'qr_detected', 'data': 'berhasil terhubung', 'aligned': False, 'timestamp': 1102367.5280096}
+2026-06-21 16:06:00,575 [CameraBottom] INFO camera_bottom.qr_detector: [QRDetector] QR baru terdeteksi: berhasil terhubung
+2026-06-21 16:06:00,575 [CoreAPI] DEBUG core.websocket: [WS] QR dari queue: {'type': 'qr_detected', 'data': 'berhasil terhubung', 'aligned': False, 'timestamp': 1102368.807834}
+2026-06-21 16:06:00,778 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:06:00,779 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:06:01,056 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:06:01,057 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:06:01,057 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:06:01,057 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:06:01,406 [CameraBottom] INFO camera_bottom.qr_detector: [QRDetector] QR baru terdeteksi: berhasil terhubung
+2026-06-21 16:06:01,407 [CoreAPI] DEBUG core.websocket: [WS] QR dari queue: {'type': 'qr_detected', 'data': 'berhasil terhubung', 'aligned': False, 'timestamp': 1102369.6535636}
+2026-06-21 16:06:02,779 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:06:02,779 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:06:03,007 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:06:03,008 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:06:03,008 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:06:03,009 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:06:03,656 [CameraBottom] INFO camera_bottom.qr_detector: [QRDetector] QR baru terdeteksi: berhasil terhubung
+2026-06-21 16:06:03,658 [CoreAPI] DEBUG core.websocket: [WS] QR dari queue: {'type': 'qr_detected', 'data': 'berhasil terhubung', 'aligned': False, 'timestamp': 1102371.8510906}
+2026-06-21 16:06:04,429 [CameraBottom] INFO camera_bottom.qr_detector: [QRDetector] QR baru terdeteksi: berhasil terhubung
+2026-06-21 16:06:04,429 [CoreAPI] DEBUG core.websocket: [WS] QR dari queue: {'type': 'qr_detected', 'data': 'berhasil terhubung', 'aligned': False, 'timestamp': 1102372.6912459}
+2026-06-21 16:06:04,785 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:06:04,788 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:06:05,018 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:06:05,018 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:06:05,019 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:06:05,019 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:06:05,354 [CameraBottom] INFO camera_bottom.qr_detector: [QRDetector] QR baru terdeteksi: berhasil terhubung
+2026-06-21 16:06:05,354 [CoreAPI] DEBUG core.websocket: [WS] QR dari queue: {'type': 'qr_detected', 'data': 'berhasil terhubung', 'aligned': False, 'timestamp': 1102373.5930874}
+2026-06-21 16:06:05,740 [CameraBottom] INFO camera_bottom.qr_detector: [QRDetector] QR baru terdeteksi: berhasil terhubung
+2026-06-21 16:06:05,741 [CoreAPI] DEBUG core.websocket: [WS] QR dari queue: {'type': 'qr_detected', 'data': 'berhasil terhubung', 'aligned': False, 'timestamp': 1102374.0067387}
+2026-06-21 16:06:06,407 [CameraBottom] INFO camera_bottom.qr_detector: [QRDetector] QR baru terdeteksi: berhasil terhubung
+2026-06-21 16:06:06,407 [CoreAPI] DEBUG core.websocket: [WS] QR dari queue: {'type': 'qr_detected', 'data': 'berhasil terhubung', 'aligned': False, 'timestamp': 1102374.662012}
+2026-06-21 16:06:06,794 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:06:06,794 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:06:06,998 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:06:06,998 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:06:06,999 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:06:06,999 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:06:07,468 [CameraBottom] INFO camera_bottom.qr_detector: [QRDetector] QR baru terdeteksi: berhasil terhubung
+2026-06-21 16:06:07,471 [CoreAPI] DEBUG core.websocket: [WS] QR dari queue: {'type': 'qr_detected', 'data': 'berhasil terhubung', 'aligned': False, 'timestamp': 1102375.7313809}
+2026-06-21 16:06:08,798 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:06:08,798 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:06:09,025 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:06:09,025 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:06:09,026 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:06:09,026 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:06:09,867 [CameraBottom] INFO camera_bottom.qr_detector: [QRDetector] QR baru terdeteksi: berhasil terhubung
+2026-06-21 16:06:09,872 [CoreAPI] DEBUG core.websocket: [WS] QR dari queue: {'type': 'qr_detected', 'data': 'berhasil terhubung', 'aligned': False, 'timestamp': 1102378.1168589}
+2026-06-21 16:06:10,802 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:06:10,804 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:06:11,032 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:06:11,033 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:06:11,033 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:06:11,033 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:06:11,141 [CameraBottom] INFO camera_bottom.qr_detector: [QRDetector] QR baru terdeteksi: berhasil terhubung
+2026-06-21 16:06:11,142 [CoreAPI] DEBUG core.websocket: [WS] QR dari queue: {'type': 'qr_detected', 'data': 'berhasil terhubung', 'aligned': False, 'timestamp': 1102379.3941978}
+2026-06-21 16:06:12,810 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:06:12,810 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:06:13,032 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:06:13,032 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:06:13,032 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:06:13,033 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:06:14,812 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:06:14,813 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:06:15,058 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:06:15,059 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:06:15,059 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:06:15,059 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:06:16,815 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:06:16,816 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:06:17,069 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:06:17,070 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:06:17,070 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:06:17,070 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:06:18,820 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:06:18,820 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:06:19,074 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:06:19,075 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:06:19,075 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:06:19,075 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:06:20,829 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:06:20,830 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:06:20,891 [CameraBottom] INFO camera_bottom.qr_detector: [QRDetector] QR baru terdeteksi: https://qr1.be/59F6
+2026-06-21 16:06:20,893 [CoreAPI] DEBUG core.websocket: [WS] QR dari queue: {'type': 'qr_detected', 'data': 'https://qr1.be/59F6', 'aligned': False, 'timestamp': 1102389.1089921}
+2026-06-21 16:06:21,087 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:06:21,087 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:06:21,088 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:06:21,088 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:06:21,498 [CameraBottom] INFO camera_bottom.qr_detector: [QRDetector] QR baru terdeteksi: https://qr1.be/59F6
+2026-06-21 16:06:21,499 [CoreAPI] DEBUG core.websocket: [WS] QR dari queue: {'type': 'qr_detected', 'data': 'https://qr1.be/59F6', 'aligned': False, 'timestamp': 1102389.7530029}
+2026-06-21 16:06:22,438 [CameraBottom] INFO camera_bottom.qr_detector: [QRDetector] QR baru terdeteksi: https://qr1.be/59F6
+2026-06-21 16:06:22,439 [CoreAPI] DEBUG core.websocket: [WS] QR dari queue: {'type': 'qr_detected', 'data': 'https://qr1.be/59F6', 'aligned': False, 'timestamp': 1102390.6510253}
+2026-06-21 16:06:22,833 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:06:22,834 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:06:23,070 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:06:23,070 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:06:23,072 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:06:23,072 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:06:24,607 [CameraBottom] INFO camera_bottom.qr_detector: [QRDetector] QR baru terdeteksi: https://qr1.be/STXU
+2026-06-21 16:06:24,609 [CoreAPI] DEBUG core.websocket: [WS] QR dari queue: {'type': 'qr_detected', 'data': 'https://qr1.be/STXU', 'aligned': False, 'timestamp': 1102392.8249555}
+2026-06-21 16:06:24,836 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:06:24,837 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:06:25,099 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:06:25,100 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:06:25,101 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:06:25,102 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:06:26,841 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:06:26,841 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:06:27,083 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:06:27,084 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:06:27,085 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:06:27,085 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:06:28,843 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:06:28,843 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:06:29,063 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:06:29,064 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:06:29,064 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:06:29,064 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:06:30,853 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:06:30,856 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:06:31,097 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:06:31,097 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:06:31,098 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:06:31,098 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:06:31,762 [CameraBottom] INFO camera_bottom.qr_detector: [QRDetector] QR baru terdeteksi: berhasil terhubung
+2026-06-21 16:06:31,763 [CoreAPI] DEBUG core.websocket: [WS] QR dari queue: {'type': 'qr_detected', 'data': 'berhasil terhubung', 'aligned': False, 'timestamp': 1102400.0196421}
+2026-06-21 16:06:32,211 [CameraBottom] INFO camera_bottom.qr_detector: [QRDetector] QR baru terdeteksi: berhasil terhubung
+2026-06-21 16:06:32,212 [CoreAPI] DEBUG core.websocket: [WS] QR dari queue: {'type': 'qr_detected', 'data': 'berhasil terhubung', 'aligned': False, 'timestamp': 1102400.4329811}
+2026-06-21 16:06:32,855 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:06:32,857 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:06:33,101 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:06:33,101 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:06:33,102 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:06:33,103 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:06:34,439 [CameraBottom] INFO camera_bottom.qr_detector: [QRDetector] QR baru terdeteksi: berhasil terhubung
+2026-06-21 16:06:34,440 [CoreAPI] DEBUG core.websocket: [WS] QR dari queue: {'type': 'qr_detected', 'data': 'berhasil terhubung', 'aligned': False, 'timestamp': 1102402.6504798}
+2026-06-21 16:06:34,859 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:06:34,859 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:06:35,099 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:06:35,100 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:06:35,101 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:06:35,101 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:06:36,860 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:06:36,860 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:06:37,099 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:06:37,100 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:06:37,101 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:06:37,102 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:06:38,869 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:06:38,871 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:06:39,086 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:06:39,087 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:06:39,087 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:06:39,087 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:06:40,873 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:06:40,874 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:06:41,120 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:06:41,121 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:06:41,121 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:06:41,122 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:06:42,883 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:06:42,885 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:06:43,096 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:06:43,097 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:06:43,097 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:06:43,098 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:06:44,884 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:06:44,885 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:06:45,225 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:06:45,225 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:06:45,225 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:06:45,225 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:06:46,885 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:06:46,885 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:06:47,033 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:06:47,033 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:06:47,033 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:06:47,033 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:06:48,888 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:06:48,889 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:06:49,084 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:06:49,084 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:06:49,085 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:06:49,085 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:06:50,890 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:06:50,890 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:06:51,047 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:06:51,048 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:06:51,048 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:06:51,048 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:06:52,898 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:06:52,899 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:06:53,077 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:06:53,078 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:06:53,078 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:06:53,078 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:06:54,907 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:06:54,907 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:06:55,092 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:06:55,092 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:06:55,092 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:06:55,093 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:06:56,912 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:06:56,912 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:06:57,105 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:06:57,105 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:06:57,106 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:06:57,106 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:06:58,920 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:06:58,920 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:06:59,103 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:06:59,103 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:06:59,103 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:06:59,103 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:07:00,921 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:07:00,921 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:07:01,124 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:07:01,125 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:07:01,125 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:07:01,125 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:07:02,930 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:07:02,930 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:07:03,133 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:07:03,133 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:07:03,133 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:07:03,134 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:07:04,932 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:07:04,933 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:07:05,120 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:07:05,120 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:07:05,120 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:07:05,121 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:07:06,939 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:07:06,940 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:07:07,113 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:07:07,113 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:07:07,113 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:07:07,114 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:07:08,942 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:07:08,943 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:07:09,153 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:07:09,153 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:07:09,153 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:07:09,154 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:07:10,951 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:07:10,953 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:07:11,143 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:07:11,143 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:07:11,144 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:07:11,144 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:07:12,962 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:07:12,962 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:07:13,156 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:07:13,157 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:07:13,157 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:07:13,157 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:07:14,972 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:07:14,973 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:07:15,183 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:07:15,183 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:07:15,184 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:07:15,184 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:07:16,980 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:07:16,980 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:07:17,166 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:07:17,166 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:07:17,166 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:07:17,166 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:07:18,984 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:07:18,984 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:07:19,161 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:07:19,161 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:07:19,162 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:07:19,162 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:07:20,991 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:07:20,992 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:07:21,197 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:07:21,197 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:07:21,197 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:07:21,197 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:07:22,995 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:07:22,995 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:07:23,160 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:07:23,160 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:07:23,160 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:07:23,160 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:07:25,001 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:07:25,001 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:07:25,172 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:07:25,173 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:07:25,173 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:07:25,173 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:07:27,001 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:07:27,002 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:07:27,195 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:07:27,195 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:07:27,196 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:07:27,196 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:07:29,002 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:07:29,002 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:07:29,173 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:07:29,173 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:07:29,173 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:07:29,173 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:07:31,012 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:07:31,012 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:07:31,214 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:07:31,215 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:07:31,215 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:07:31,215 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:07:33,017 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:07:33,018 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:07:33,204 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:07:33,204 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:07:33,205 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:07:33,206 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:07:35,023 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:07:35,024 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:07:35,211 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:07:35,211 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:07:35,211 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:07:35,211 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:07:37,030 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:07:37,030 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:07:37,224 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:07:37,224 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:07:37,224 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:07:37,225 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:07:39,034 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:07:39,034 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:07:39,212 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:07:39,212 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:07:39,213 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:07:39,213 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:07:41,040 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:07:41,040 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:07:41,199 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:07:41,199 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:07:41,199 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:07:41,200 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:07:43,046 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:07:43,047 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:07:43,252 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:07:43,252 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:07:43,253 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:07:43,253 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:07:45,050 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:07:45,051 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:07:45,249 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:07:45,249 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:07:45,249 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:07:45,250 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:07:47,058 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:07:47,059 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:07:47,246 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:07:47,246 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:07:47,246 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:07:47,246 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:07:49,064 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:07:49,065 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:07:49,241 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:07:49,241 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:07:49,241 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:07:49,242 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:07:51,066 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:07:51,067 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:07:51,259 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:07:51,259 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:07:51,259 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:07:51,260 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:07:53,077 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:07:53,078 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:07:53,239 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:07:53,239 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:07:53,239 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:07:53,239 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:07:55,085 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:07:55,086 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:07:55,265 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:07:55,265 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:07:55,265 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:07:55,266 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:07:57,093 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:07:57,093 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:07:57,269 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:07:57,269 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:07:57,269 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:07:57,269 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:07:59,093 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:07:59,094 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:07:59,313 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:07:59,314 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:07:59,314 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:07:59,314 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:08:01,102 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:08:01,103 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:08:01,274 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:08:01,274 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:08:01,275 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:08:01,275 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:08:03,111 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:08:03,111 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:08:03,280 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:08:03,280 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:08:03,280 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:08:03,280 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:08:05,118 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:08:05,119 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:08:05,288 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:08:05,288 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:08:05,288 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:08:05,288 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:08:07,126 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:08:07,127 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:08:07,304 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:08:07,304 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:08:07,304 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:08:07,304 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:08:09,131 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:08:09,132 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:08:09,325 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:08:09,325 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:08:09,325 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:08:09,325 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:08:11,132 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:08:11,133 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:08:11,293 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:08:11,294 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:08:11,294 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:08:11,294 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:08:13,133 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:08:13,134 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:08:13,329 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:08:13,330 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:08:13,330 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:08:13,330 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:08:15,139 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:08:15,139 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:08:15,309 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:08:15,309 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:08:15,310 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:08:15,310 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:08:17,148 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:08:17,148 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:08:17,328 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:08:17,328 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:08:17,328 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:08:17,329 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:08:19,156 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:08:19,157 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:08:19,325 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:08:19,326 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:08:19,326 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:08:19,326 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:08:21,156 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:08:21,157 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:08:21,321 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:08:21,321 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:08:21,322 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:08:21,322 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:08:23,161 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:08:23,161 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:08:23,350 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:08:23,350 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:08:23,350 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:08:23,350 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:08:25,170 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:08:25,171 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:08:25,354 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:08:25,354 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:08:25,354 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:08:25,354 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:08:27,173 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:08:27,173 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:08:27,349 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:08:27,349 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:08:27,350 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:08:27,350 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:08:29,179 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:08:29,180 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:08:29,388 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:08:29,388 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:08:29,388 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:08:29,388 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:08:31,184 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:08:31,185 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:08:31,347 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:08:31,347 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:08:31,348 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:08:31,348 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:08:33,186 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:08:33,186 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:08:33,344 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:08:33,344 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:08:33,344 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:08:33,344 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:08:35,194 [CameraFront] WARNING camera_front.camera: [FrontCamera] Kamera tidak terbuka, mencoba reconnect...
+2026-06-21 16:08:35,195 [CameraFront] INFO camera_front.camera: [FrontCamera] Membuka kamera index=1
+2026-06-21 16:08:35,384 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 3=640 (mungkin tidak didukung hardware)
+2026-06-21 16:08:35,385 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 4=480 (mungkin tidak didukung hardware)
+2026-06-21 16:08:35,385 [CameraFront] WARNING camera_front.camera: [FrontCamera] Gagal set property 5=30 (mungkin tidak didukung hardware)
+2026-06-21 16:08:35,385 [CameraFront] ERROR camera_front.camera: [FrontCamera] Gagal membuka kamera!
+2026-06-21 16:08:37,185 [MainProcess] INFO main: Signal diterima, menghentikan semua proses...
+2026-06-21 16:08:37,231 [MainProcess] INFO main: Semua proses dihentikan. Selamat tinggal!
