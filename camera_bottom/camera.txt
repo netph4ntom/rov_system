@@ -1,0 +1,109 @@
+# camera_bottom/camera.py
+# Wrapper kamera bawah ROV — mirip FrontCamera tapi index berbeda
+# dan ada exposure adjustment khusus untuk kondisi docking (close-range).
+#
+# Perubahan dari versi sebelumnya:
+#   - Context manager (__enter__/__exit__) untuk cleanup yang reliable
+#   - Reconnect throttle agar tidak blocking capture loop
+#   - cap.set() divalidasi dan di-log jika gagal
+#   - Type hint diperbaiki (np.ndarray | None)
+#   - Komentar platform-specific untuk CAP_PROP_AUTO_EXPOSURE
+#   - Titik ekstra di __del__ dihapus
+
+import cv2
+import time
+import logging
+import numpy as np
+
+from config import CAMERA_BOTTOM_INDEX, FRAME_WIDTH, FRAME_HEIGHT, FRAME_FPS
+
+logger = logging.getLogger(__name__)
+
+# Cooldown antar percobaan reconnect agar tidak blocking capture loop
+_RECONNECT_COOLDOWN_S = 2.0
+
+
+class BottomCamera:
+    def __init__(self):
+        self.index = CAMERA_BOTTOM_INDEX
+        self.cap: cv2.VideoCapture | None = None
+        self._last_reconnect: float = 0.0
+        self._open()
+
+    # ──────────────────────────────────────────
+    # Context manager
+    # ──────────────────────────────────────────
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *args):
+        self.release()
+
+    # ──────────────────────────────────────────
+    # Internal open
+    # ──────────────────────────────────────────
+    def _open(self):
+        logger.info(f"[BottomCamera] Membuka kamera index={self.index}")
+        self.cap = cv2.VideoCapture(self.index)
+
+        # Validasi setiap cap.set() agar kegagalan tidak silent
+        props = {
+            cv2.CAP_PROP_FRAME_WIDTH:  FRAME_WIDTH,
+            cv2.CAP_PROP_FRAME_HEIGHT: FRAME_HEIGHT,
+            cv2.CAP_PROP_FPS:          FRAME_FPS,
+        }
+        for prop, value in props.items():
+            if not self.cap.set(prop, value):
+                logger.warning(
+                    f"[BottomCamera] Gagal set property {prop}={value} "
+                    f"(mungkin tidak didukung hardware)"
+                )
+
+        # Auto-exposure ON agar adaptif saat ROV mendekati dock
+        # Platform note:
+        #   V4L2 (Linux) : 1 = manual, 3 = auto  ← ROV pakai ini
+        #   Windows      : 0.25 = manual, 0.75 = auto
+        if not self.cap.set(cv2.CAP_PROP_AUTO_EXPOSURE, 3):
+            logger.warning("[BottomCamera] Gagal set AUTO_EXPOSURE (V4L2 value=3)")
+
+        if not self.cap.isOpened():
+            logger.error("[BottomCamera] Gagal membuka kamera!")
+
+    # ──────────────────────────────────────────
+    # Public API
+    # ──────────────────────────────────────────
+    def read_frame(self) -> tuple[bool, np.ndarray | None]:
+        """
+        Baca frame dengan auto-reconnect jika kamera terputus.
+        Reconnect di-throttle oleh _RECONNECT_COOLDOWN_S agar tidak
+        blocking capture loop saat kamera benar-benar mati.
+        """
+        if self.cap is None or not self.cap.isOpened():
+            now = time.monotonic()
+            if now - self._last_reconnect < _RECONNECT_COOLDOWN_S:
+                # Belum waktunya retry, kembalikan failure langsung
+                return False, None
+            logger.warning("[BottomCamera] Kamera tidak terbuka, mencoba reconnect...")
+            self._last_reconnect = now
+            self._open()
+
+        ret, frame = self.cap.read()
+        if not ret:
+            now = time.monotonic()
+            if now - self._last_reconnect >= _RECONNECT_COOLDOWN_S:
+                logger.warning("[BottomCamera] Gagal baca frame, reconnect...")
+                self._last_reconnect = now
+                self.release()
+                self._open()
+                ret, frame = self.cap.read()
+
+        return ret, frame if ret else None
+
+    def release(self):
+        if self.cap and self.cap.isOpened():
+            self.cap.release()
+            logger.info("[BottomCamera] Kamera dilepas.")
+        self.cap = None
+
+    def __del__(self):
+        self.release()

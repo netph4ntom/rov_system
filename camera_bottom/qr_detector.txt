@@ -1,0 +1,196 @@
+# camera_bottom/qr_detector.py
+# QR code detection menggunakan OpenCV.
+# Mampu mendeteksi QR code di mana saja di dalam frame kamera.
+#
+# Output:
+#   - Decode string QR → masuk ke qr_result_queue
+#   - Dock alignment event → masuk ke dock_event_queue
+#
+# Perubahan dari versi sebelumnya:
+#   - Logic update state diperbaiki: snapshot prev state sebelum update
+#     agar deteksi perubahan aligned/lost tidak ada silent miss
+#   - _decode menggunakan lazy generator (_iter_variants) sehingga
+#     variant mahal tidak dibuat kalau variant awal sudah berhasil
+#   - Guard channel split: skip jika frame bukan BGR 3-channel
+#   - Recovery otomatis QRCodeDetector jika cv2.error terjadi
+#   - Exception queue di-log (debug) bukan di-swallow diam-diam
+#   - _emit_qr_event dipisah dari _emit_dock_event
+#   - Type hint diperbaiki (np.ndarray | None)
+
+import time
+import logging
+import multiprocessing
+from typing import Generator
+
+import numpy as np
+import cv2
+
+from config import QR_SCAN_INTERVAL_MS
+
+logger = logging.getLogger(__name__)
+
+
+class QRDetector:
+    def __init__(
+        self,
+        qr_result_queue:  multiprocessing.Queue,
+        dock_event_queue: multiprocessing.Queue,
+    ):
+        self.qr_queue   = qr_result_queue
+        self.dock_queue = dock_event_queue
+
+        self._last_scan_time: float            = 0.0
+        self._last_qr_data:   str | None       = None
+        self._dock_aligned:   bool             = False
+        self._last_bbox:      np.ndarray | None = None
+
+        self._scan_interval = QR_SCAN_INTERVAL_MS / 1000.0
+
+        self.detector = cv2.QRCodeDetector()
+
+    # ──────────────────────────────────────────
+    # Main method — dipanggil tiap frame
+    # ──────────────────────────────────────────
+    def scan(
+        self,
+        frame: np.ndarray,
+        preprocessed: np.ndarray,
+    ) -> tuple[str | None, bool, np.ndarray | None]:
+        """
+        Scan QR code dari frame.
+        Throttled oleh QR_SCAN_INTERVAL_MS agar tidak membebani CPU.
+
+        Returns:
+            (qr_data, is_dock_aligned, bbox)
+              qr_data        = string hasil decode, None jika tidak ada
+              is_dock_aligned = True jika QR terdeteksi di mana saja dalam frame
+              bbox           = koordinat bounding box QR code (np.ndarray | None)
+        """
+        now = time.monotonic()
+        if (now - self._last_scan_time) < self._scan_interval:
+            return self._last_qr_data, self._dock_aligned, self._last_bbox
+
+        self._last_scan_time = now
+
+        qr_data, bbox = self._decode(frame, preprocessed)
+
+        # ── Snapshot state LAMA sebelum diupdate ──────────────────────────
+        # Ini krusial: perbandingan prev vs new harus pakai nilai sebelum
+        # assign, agar tidak ada silent miss saat QR hilang lalu muncul lagi.
+        prev_qr_data = self._last_qr_data
+        prev_aligned = self._dock_aligned
+
+        # ── Update state ──────────────────────────────────────────────────
+        self._last_qr_data = qr_data
+        self._dock_aligned = (qr_data is not None)
+        self._last_bbox    = bbox
+
+        # ── Kirim QR event kalau ada data BARU (termasuk setelah sempat None) ──
+        if qr_data and qr_data != prev_qr_data:
+            logger.info(f"[QRDetector] QR baru terdeteksi: {qr_data}")
+            self._emit_qr_event(qr_data, now)
+
+        # ── Kirim dock event kalau status aligned berubah ─────────────────
+        if self._dock_aligned != prev_aligned:
+            self._emit_dock_event(now)
+
+        return self._last_qr_data, self._dock_aligned, self._last_bbox
+
+    # ──────────────────────────────────────────
+    # Decode helpers
+    # ──────────────────────────────────────────
+    def _iter_variants(
+        self,
+        frame: np.ndarray,
+        preprocessed: np.ndarray,
+    ) -> Generator[np.ndarray, None, None]:
+        """
+        Generator lazy untuk variant preprocessing.
+        Variant mahal (channel split, per-channel threshold) hanya dibuat
+        kalau variant sebelumnya gagal mendeteksi QR.
+        """
+        # 1. Adaptive threshold dari preprocessor (sudah sharpen)
+        yield preprocessed
+
+        # 2. Grayscale standar
+        gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+        yield gray
+
+        # 3. Otsu global threshold
+        _, otsu = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+        yield otsu
+
+        # 4. Adaptive threshold block size lebih besar (QR dekat / besar)
+        thresh_large = cv2.adaptiveThreshold(
+            gray, 255,
+            cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
+            cv2.THRESH_BINARY, 25, 2
+        )
+        yield thresh_large
+
+        # 5. Channel BGR terpisah — hanya kalau frame benar-benar 3-channel
+        # Guard ini mencegah crash jika frame entah bagaimana masuk sebagai grayscale
+        if len(frame.shape) == 3 and frame.shape[2] == 3:
+            b_ch, g_ch, r_ch = cv2.split(frame)
+            yield r_ch
+            yield g_ch
+            yield b_ch
+
+            # 6. Otsu per-channel (lebih sensitif untuk QR code berwarna di bawah air)
+            for ch in (r_ch, g_ch, b_ch):
+                _, ch_otsu = cv2.threshold(ch, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+                yield ch_otsu
+
+    def _decode(
+        self,
+        frame: np.ndarray,
+        preprocessed: np.ndarray,
+    ) -> tuple[str | None, np.ndarray | None]:
+        """
+        Decode QR code menggunakan OpenCV QRCodeDetector.
+        Multi-pass lazy: berhenti di variant pertama yang berhasil.
+        Return (data_string, bounding_box) atau (None, None).
+        Jika OpenCV error, detector di-reinit otomatis.
+        """
+        try:
+            for img_variant in self._iter_variants(frame, preprocessed):
+                data, bbox, _ = self.detector.detectAndDecode(img_variant)
+                if bbox is not None and len(bbox) > 0 and data:
+                    return data, bbox
+        except cv2.error as e:
+            # State detector bisa corrupt setelah banyak frame rusak di embedded HW
+            logger.warning(f"[QRDetector] OpenCV error, reinit detector: {e}")
+            self.detector = cv2.QRCodeDetector()
+
+        return None, None
+
+    # ──────────────────────────────────────────
+    # Event emitters
+    # ──────────────────────────────────────────
+    def _emit_qr_event(self, qr_data: str, timestamp: float):
+        payload = {
+            "type":      "qr_detected",
+            "data":      qr_data,
+            "aligned":   self._dock_aligned,
+            "timestamp": timestamp,
+        }
+        self._put_nowait(self.qr_queue, payload, "qr_queue")
+
+    def _emit_dock_event(self, timestamp: float):
+        payload = {
+            "type":      "dock_aligned" if self._dock_aligned else "dock_lost",
+            "aligned":   self._dock_aligned,
+            "timestamp": timestamp,
+        }
+        self._put_nowait(self.dock_queue, payload, "dock_queue")
+
+    @staticmethod
+    def _put_nowait(queue: multiprocessing.Queue, payload: dict, name: str):
+        """
+        Non-blocking put ke queue.
+        Log debug kalau penuh — queue penuh bisa tanda consumer lambat/mati.
+        """
+        try:
+            queue.put_nowait(payload)
+        except Exception as e:
+            logger.debug(f"[QRDetector] {name} penuh, payload di-skip: {e}")

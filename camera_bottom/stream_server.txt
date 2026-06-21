@@ -1,0 +1,227 @@
+# camera_bottom/stream_server.py
+# MJPEG server untuk kamera bawah sekaligus menjalankan QR scan loop.
+#
+# Proses ini melakukan dua hal sekaligus:
+#   1. Stream MJPEG ke React (port 8002)
+#   2. Scan QR code setiap frame dan push ke shared queue
+#
+# Thread model:
+#   - Thread utama Flask untuk HTTP /stream
+#   - Thread background untuk capture + QR scanning
+#
+# Endpoint:
+#   GET /stream  → MJPEG stream
+#   GET /health  → status kamera + QR terakhir
+#
+# Perubahan dari versi sebelumnya:
+#   - _generate_frames: busy-wait diganti sleep(5ms) + frame.copy() untuk thread safety
+#   - _capture_and_scan_loop: busy-wait saat kamera mati diganti sleep(10ms)
+#   - _capture_and_scan_loop: dibungkus try/except agar crash tidak silent
+#   - _generate_frames: GeneratorExit di-handle untuk detect client disconnect
+#   - /health: akses state lewat helper thread-safe (_get_health_state)
+#   - app.run: debug=False eksplisit
+#   - import time ditambahkan
+
+import time
+import threading
+import logging
+import multiprocessing
+
+import cv2
+from flask import Flask, Response, jsonify
+
+from camera_bottom.camera import BottomCamera
+from camera_bottom.image_processing import BottomImageProcessor
+from camera_bottom.qr_detector import QRDetector
+from config import PORT_STREAM_BOTTOM, MJPEG_QUALITY
+
+logger = logging.getLogger(__name__)
+app = Flask(__name__)
+
+# ──────────────────────────────────────────────
+# State global proses ini
+# ──────────────────────────────────────────────
+_camera    : BottomCamera | None         = None
+_processor : BottomImageProcessor | None = None
+_detector  : QRDetector | None           = None
+
+# Frame terbaru yang sudah diproses, di-share antara capture thread dan stream thread
+_current_frame = None
+_frame_lock    = threading.Lock()
+_frame_id      = 0
+
+
+# ──────────────────────────────────────────────
+# Background thread: baca kamera + scan QR
+# ──────────────────────────────────────────────
+def _capture_and_scan_loop():
+    """
+    Loop berjalan di background thread.
+    Baca frame → preprocessing → scan QR → simpan frame untuk stream.
+
+    Dibungkus try/except agar crash tidak silent (stream freeze tanpa log).
+    Sleep kecil saat kamera mati agar tidak busy-wait dan makan CPU.
+    """
+    global _current_frame
+    global _frame_id
+
+    try:
+        while True:
+            ret, frame = _camera.read_frame()
+            if not ret or frame is None:
+                # Kamera disconnect atau belum siap — jangan busy-wait
+                time.sleep(0.01)
+                continue
+
+            # Preprocessing khusus QR (grayscale + threshold + sharpen)
+            preprocessed = _processor.preprocess_for_qr(frame)
+
+            # Scan QR
+            qr_data, aligned, bbox = _detector.scan(frame, preprocessed)
+
+            # Update HUD state
+            _processor.update_qr_data(qr_data)
+            _processor.update_dock_status(aligned)
+            _processor.update_bbox(bbox)
+
+            # Proses frame untuk stream (drawing overlay, tanpa sharpen)
+            display_frame = _processor.process(frame.copy())
+
+            with _frame_lock:
+                _current_frame = display_frame
+                _frame_id += 1
+
+    except Exception as e:
+        # Thread crash harus terlihat di log — jangan biarkan freeze diam-diam
+        logger.critical(
+            f"[BottomStream] Capture thread crash, stream berhenti: {e}",
+            exc_info=True
+        )
+
+
+# ──────────────────────────────────────────────
+# MJPEG generator
+# ──────────────────────────────────────────────
+def _generate_frames():
+    """
+    Generator MJPEG.
+    - Sleep 5ms saat frame belum tersedia (bukan busy-wait).
+    - frame.copy() untuk menghindari torn read dari thread capture.
+    - GeneratorExit di-catch untuk log saat client disconnect.
+    """
+    
+    last_id = -1
+    while True:
+        with _frame_lock:
+            if _frame_id == last_id or _current_frame is None:
+                frame = None
+            else:
+                frame  = _current_frame.copy()
+                last_id = _frame_id
+                
+        if frame is None:
+            # Frame belum tersedia (kamera belum siap), beri CPU napas
+            time.sleep(0.005)
+            continue
+
+        ret, buffer = cv2.imencode(
+            ".jpg", frame,
+            [cv2.IMWRITE_JPEG_QUALITY, MJPEG_QUALITY]
+        )
+        if not ret:
+            continue
+
+        try:
+            yield (
+                b"--frame\r\n"
+                b"Content-Type: image/jpeg\r\n\r\n"
+                + buffer.tobytes()
+                + b"\r\n"
+            )
+        except GeneratorExit:
+            logger.info("[BottomStream] Client disconnect dari /stream")
+            return
+
+
+# ──────────────────────────────────────────────
+# Health state helper (thread-safe read)
+# ──────────────────────────────────────────────
+def _get_health_state() -> dict:
+    """
+    Baca state _processor secara thread-safe untuk endpoint /health.
+    Meskipun assignment string/bool di CPython bersifat atomik karena GIL,
+    pembacaan konsisten lebih baik dilakukan dengan lock eksplisit.
+    """
+    with _frame_lock:
+        if _processor is None:
+            return {"last_qr": None, "dock_aligned": False}
+        return {
+            "last_qr":      _processor._last_qr_data,
+            "dock_aligned": _processor._dock_aligned,
+        }
+
+
+# ──────────────────────────────────────────────
+# Routes
+# ──────────────────────────────────────────────
+@app.route("/stream")
+def stream():
+    return Response(
+        _generate_frames(),
+        mimetype="multipart/x-mixed-replace; boundary=frame"
+    )
+
+
+@app.route("/health")
+def health():
+    cam_ok = bool(_camera and _camera.cap and _camera.cap.isOpened())
+    state  = _get_health_state()
+    return jsonify({
+        "camera":       "bottom",
+        "status":       "ok" if cam_ok else "error",
+        "last_qr":      state["last_qr"],
+        "dock_aligned": state["dock_aligned"],
+    })
+
+
+# ──────────────────────────────────────────────
+# Entry point
+# ──────────────────────────────────────────────
+def run_bottom_stream_server(
+    qr_result_queue:  multiprocessing.Queue,
+    dock_event_queue: multiprocessing.Queue,
+):
+    """
+    Dipanggil oleh main.py sebagai proses terpisah.
+    Menerima shared queue untuk komunikasi ke core.
+    """
+    global _camera, _processor, _detector
+
+    logging.basicConfig(level=logging.INFO)
+    logger.info("[BottomStream] Proses dimulai")
+
+    _camera    = BottomCamera()
+    _processor = BottomImageProcessor(show_hud=True)
+    _detector  = QRDetector(qr_result_queue, dock_event_queue)
+
+    capture_thread = threading.Thread(
+        target=_capture_and_scan_loop,
+        daemon=True,
+        name="BottomCaptureThread"
+    )
+    capture_thread.start()
+
+    logger.info(f"[BottomStream] MJPEG server berjalan di port {PORT_STREAM_BOTTOM}")
+    app.run(
+        host="0.0.0.0",
+        port=PORT_STREAM_BOTTOM,
+        threaded=True,
+        use_reloader=False,
+        debug=False,  # eksplisit agar tidak nyala kalau env var FLASK_DEBUG=1
+    )
+
+
+if __name__ == "__main__":
+    dummy_qr_queue   = multiprocessing.Queue()
+    dummy_dock_queue = multiprocessing.Queue()
+    run_bottom_stream_server(dummy_qr_queue, dummy_dock_queue)
